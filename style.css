@@ -1,0 +1,71 @@
+@charset "UTF-8";
+
+/*
+    em HTML é id    = em CSS é (#) - só pode um elemento no documento HTML
+    em HTML é class = em CSS é (.) - podem vários elementos no documento HTML
+
+    Atenção: certas configurações (estilos) do "id" sobrepõem a configurações de "class"
+*/
+
+/*Fonte oficial site Apple (externa_baixada)*/
+
+@font-face {
+    font-family: 'fonte baixada_Apple';
+    src: url(fonts/apple.otf) format('opentype');
+    /*
+         url('fonts/BeautyRegular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal; */
+}
+
+body {
+    background-color: #d6fde9;
+    font-family: 'fonte baixada_Apple';
+    
+    
+}
+
+h1 {
+    color: #1e402f;
+}
+
+/*ATENÇÃO: não se deve usar no mesmo arquivo HTML o mesmo "id" (HTML) em pontos diferentes
+... ou seja caso necessário um Seletor para mais de um elemento do arquivo HTML, usa-se "class" (HTML) - "." (CSS)
+*/
+h1#principal { /*SELETOR PERSONALIZADO USANDO ID (HTML) - # (CSS)*/
+    text-align: center;
+    background-color: #3c805e;
+    color: white; /*este color sobrepõe ao color do "h1" normal*/
+}
+
+h2 {
+    color: #3c805e;
+}
+
+/*SELTOR "class":
+
+- no HTML não se usa acentuações para dar nomes as Classes;
+- não se coloca o nome do "elemento" (basta digitar "." e o nome do "class" (que foi dado no HTML)
+
+Atenção: podemos combinar as "class" no mesmo elemento, bastando separa-los com espaço (não precisa separar por "," ou ";")
+
+Importante! se atentar com as hieraquias de estilos entre as "class" e também aos "id".
+
+*/
+
+.basico {
+    color: #3c805e;
+}
+
+.intermediario {
+    color: #80793c;
+}
+
+.avancado {
+    color: #803c3c;
+}
+
+/*DESTAQUE (estilo marca-texto)*/
+.destaque {
+    background-color: rgba(197, 197, 96, 0.438);
+}
